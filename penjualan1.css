@@ -1,0 +1,306 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: white;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+  flex-direction: column;
+}
+.header {
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.5)), 
+    url("makan.jpg");
+    text-align: center;
+    height: 330px;
+    background-position: center;
+    position: relative;
+    backdrop-filter: blur(20px);
+    padding: 10px;
+    padding: 8px;
+    width: 100%;
+    box-shadow: 2px 0 15px rgba(0,0,0,0.5);
+}
+
+h1 {
+   padding-top: 80px;
+    text-align: center;
+    color: white;
+}
+
+.header p {
+  font-size: 18px;
+  text-align: center;
+  color: white;
+}
+
+.open-btn {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      font-size: 24px;
+      cursor: pointer;
+      color: white;
+      background: none;
+      border: none;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background:linear-gradient(to bottom,#8B5A2B, white);
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+      backdrop-filter: blur(15px);
+      box-shadow: 2px 0 15px rgba(0,0,0,0.5);
+      z-index: 1000;
+    }
+
+    .sidebar a {
+      padding: 10px 25px;
+      text-decoration: none;
+      font-size: 18px;
+      color: black;
+      display: block;
+      transition: 0.2s;
+    }
+
+    .sidebar a:hover {
+      background: gray;
+    }
+
+    .sidebar .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 30px;
+      cursor: pointer;
+      color: white;
+      background: none;
+      border: none;
+}
+
+.pembuka {
+ background: 
+    linear-gradient(to bottom, #8B5A2B);
+ width: 100%;
+ display: flex;                    
+ align-items: center;               
+ justify-content: space-between;    
+ padding: 40px;    
+ gap: 20px;                 
+}
+
+.teks {
+  flex: 1;
+  text-align: left;
+}
+
+.teks p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: white;
+}
+
+.teks h1 {
+  font-size: 3rem;  
+  color: white;        
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.gambar {
+  flex: 1;                     /* bagian kanan */
+  display: flex;
+  justify-content: flex-end;   /* dorong gambar ke kanan */
+  text-align: right;
+  margin-right: 80px;
+  padding-right: 60px;
+  padding-bottom: 15px;
+}
+
+.gambar img {
+  width: 300px;
+  height: auto;
+  border-radius: 20px;     
+}
+
+.content {
+  background:linear-gradient(to bottom,#8B5A2B ,white);
+  flex : 1;  /* isi ruang kosong di antara header dan footer */
+}
+
+.content h4 {
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: 1px black;
+    text-align: center;
+    font-size: 30px;
+
+}
+
+.menu-makanan {
+  padding: 20px;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  gap: 30px; 
+  margin-top: 40px;
+  margin-left: 25px;
+  margin-bottom: 20px;
+} 
+
+.teks-miring {
+  font-size: small;
+}
+
+.makanan {
+  display: flex;
+  background-color: white;
+  flex-direction: column; 
+  align-items: center;
+  gap: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px black;
+  backdrop-filter: blur(20px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  padding: 15px; 
+}
+
+.makanan:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 0 25px rgba(0,0,0,0.7); 
+}
+.makanan p, 
+.makanan a {
+  margin: 0;           
+  text-align: center; 
+  
+}
+
+p {
+    text-decoration: none;
+    text-align: left;
+    color: black;
+}
+
+img {
+    border-radius: 10px;
+}
+
+a.button {
+  display: inline-block;
+  padding: 8px 15px;
+  background: black;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+a.button:hover {
+  background: gray;
+}
+ 
+.footer {
+      background: linear-gradient(to top, #3a1f04);
+      padding: 10px;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 0 15px black;
+      width: 100%; 
+      margin-top: auto;
+}
+
+.footer p {
+  text-align: center;
+  color: white;
+}
+
+/* Animasi fade-in + slide-up */
+@keyframes fadeSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeSlideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Terapkan ke header */
+.header {
+  animation: fadeSlideDown 1s ease forwards;
+}
+
+/* Pembuka (teks ke kiri, gambar ke kanan) */
+.pembuka .teks {
+  animation: fadeSlideLeft 1s ease forwards;
+}
+
+.pembuka .gambar {
+  animation: fadeSlideRight 1s ease forwards;
+}
+
+/* Konten menu */
+.content {
+  animation: fadeSlideUp 1.2s ease forwards;
+}
+
+.menu-makanan .makanan {
+  opacity: 0;
+  animation: fadeSlideUp 0.8s ease forwards;
+}
+
+/* kasih delay bertahap biar muncul satu-satu */
+.menu-makanan .makanan:nth-child(1) { animation-delay: 0.3s; }
+.menu-makanan .makanan:nth-child(2) { animation-delay: 0.5s; }
+.menu-makanan .makanan:nth-child(3) { animation-delay: 0.7s; }
+.menu-makanan .makanan:nth-child(4) { animation-delay: 0.9s; }
+.menu-makanan .makanan:nth-child(5) { animation-delay: 1.1s; }
+
+/* Footer */
+.footer {
+  animation: fadeSlideUp 1.5s ease forwards;
+}
